@@ -3,84 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אף פעם לא תצעדי לבד</title>
+    <title>דברים גדולים בדרך - BINNI</title>
     <style>
         body {
-            font-family: "Arial", sans-serif;
-            background: linear-gradient(135deg, #FFC107, #000000);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
             margin: 0;
-            min-height: 100vh;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-        img {
-            width: 600px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-            animation: zoomIn 1.5s ease-in-out;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            overflow: hidden;
         }
 
         h1 {
-            margin-top: 20px;
             font-size: 3rem;
-            font-weight: bold;
-            color: #FFC107;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
-            animation: slideIn 1s ease-in-out;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        p {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #ffffff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-            margin-top: 10px;
-            animation: fadeIn 2s ease-in-out;
+        .highlight {
+            color: #ffe600;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: scale(0.9);
             }
             to {
                 opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
                 transform: scale(1);
-                opacity: 1;
             }
         }
     </style>
 </head>
 <body>
-    <img src="https://scontent.ftlv26-1.fna.fbcdn.net/v/t39.30808-6/301154561_494633736001092_7744353901093769929_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=v46ugBfeHeEQ7kNvgEMDZGr&_nc_zt=23&_nc_ht=scontent.ftlv26-1.fna&_nc_gid=Af_PGs5wriAJbyA-FY-hXs3&oh=00_AYAt7Z90n2WaWZQJPI6PW9vZRntnTi8UyRusaJZdTyu6bQ&oe=675D44A2" alt="תמונה">
-    <h1>אף פעם לא תצעדי לבד</h1>
-    <p>הדם של BINNI צהוב שחור</p>
+    <h1>דברים גדולים בדרך <span class="highlight">BINNI</span></h1>
 </body>
 </html>

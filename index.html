@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דברים גדולים בדרך - BINNI</title>
+    <title>אף פעם לא תצעדי לבד</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
             margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            overflow: hidden;
         }
 
-        h1 {
-            font-size: 3rem;
-            text-align: center;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             animation: fadeIn 2s ease-in-out;
         }
 
-        .highlight {
-            color: #ffe600;
+        h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #FFC107; /* צהוב */
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #000;
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: scale(0.9);
             }
             to {
                 opacity: 1;
-                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
         }
     </style>
 </head>
 <body>
-    <h1>דברים גדולים בדרך <span class="highlight">BINNI</span></h1>
+    <img src="https://scontent.ftlv26-1.fna.fbcdn.net/v/t39.30808-6/301154561_494633736001092_7744353901093769929_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=v46ugBfeHeEQ7kNvgEMDZGr&_nc_zt=23&_nc_ht=scontent.ftlv26-1.fna&_nc_gid=Af_PGs5wriAJbyA-FY-hXs3&oh=00_AYAt7Z90n2WaWZQJPI6PW9vZRntnTi8UyRusaJZdTyu6bQ&oe=675D44A2" alt="תמונה">
+    <h1>אף פעם לא תצעדי לבד</h1>
+    <p>הדם של BINNI צהוב שחור</p>
 </body>
 </html>

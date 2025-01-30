@@ -1,46 +1,323 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דברים גדולים בדרך - BINNI</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8" />
+  <title>קהילת הוואטסאפ הגדולה – בינה מלאכותית בגובה העיניים</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        h1 {
-            font-size: 3rem;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+  ;if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1260012921951785');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1260012921951785&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-        .highlight {
-            color: #ffe600;
-        }
+  <!-- עיצוב מתקדם ב-CSS -->
+  <style>
+    /* אפס הגדרות בסיס */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Alef", sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden; /* למניעת גלילה רוחבית */
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
+    /********************************************/
+    /*         אזור HERO עם גרדיאנט נע            */
+    /********************************************/
+    .hero {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding: 100px 20px 140px; /* שוליים פנימיים */
+      /* גרדיאנט גדול מימדים (רקע נע) */
+      background: linear-gradient(135deg, #2ec7a6, #58a6ff);
+      background-size: 300% 300%;
+      animation: heroBG 12s ease-in-out infinite;
+      clip-path: ellipse(100% 100% at 50% 0%);
+    }
+    /* אנימציית הגרדיאנט */
+    @keyframes heroBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .hero h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    /********************************************/
+    /*            צורת ה-Wave בפרלקס             */
+    /********************************************/
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 160px; /* גובה גדול יותר כדי שנוכל להזיז */
+      overflow: hidden;
+      line-height: 0;
+    }
+    /* ה-SVG עצמו */
+    .wave svg {
+      position: relative;
+      display: block;
+      width: calc(130% + 1.3px);
+      height: 100%;
+    }
+    /* נצבע את הגלים באותו רקע של body או בגוון בהיר */
+    .wave .shape-fill {
+      fill: #f4f4f4;
+      transition: fill 0.3s;
+    }
+
+    /********************************************/
+    /*           תוכן הקופסה הלבנה              */
+    /********************************************/
+    .container {
+      max-width: 900px;
+      margin: -80px auto 0;  /* -80px כדי להרים את הקופסה מעל הגל */
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      padding: 40px 20px 60px;
+      text-align: center;
+      position: relative;
+      z-index: 1; /* כדי שיישב מעל הגל */
+      opacity: 0; /* מוסתר בהתחלה עבור אנימציית כניסה */
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .container.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* תמונה מרחפת בעדינות */
+    .hero-image {
+      max-width: 230px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      animation: floatImg 5s ease-in-out infinite;
+    }
+    @keyframes floatImg {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      margin: 20px auto;
+      max-width: 600px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      color: #333;
+      position: relative;
+      display: inline-block;
+    }
+    h3::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 60%;
+      height: 3px;
+      background-color: #2ec7a6;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /********************************************/
+    /*    רשימת יתרונות: כניסה בהדרגה (scroll)  */
+    /********************************************/
+    .benefits {
+      list-style: none;
+      margin: 30px auto;
+      padding: 0;
+      max-width: 600px;
+      text-align: right; 
+      direction: rtl;
+    }
+    .benefits li {
+      margin-bottom: 15px;
+      padding-right: 35px; 
+      position: relative;
+      font-size: 1rem;
+      color: #444;
+
+      /* מוסתר בהתחלה */
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .benefits li::before {
+      content: "✔";
+      color: #2ec7a6;
+      position: absolute;
+      right: 0; 
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+    .benefits li.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /********************************************/
+    /*         כפתור הנעה לפעולה (CTA)          */
+    /********************************************/
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #4caf50 0%, #2ec7a6 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-top: 30px;
+    }
+    .cta-button:hover {
+      background: linear-gradient(135deg, #45a049 0%, #28b294 100%);
+      transform: translateY(-2px);
+    }
+
+    /********************************************/
+    /*              כותרת תחתונה                */
+    /********************************************/
+    .footer {
+      margin: 40px auto 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* התאמה למובייל */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .hero h2 {
+        font-size: 1.1rem;
+      }
+      .container {
+        margin: -60px auto 0;
+        padding: 20px;
+      }
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>דברים גדולים בדרך <span class="highlight">BINNI</span></h1>
+  <!-- אזור HERO -->
+  <section class="hero">
+    <h1>בואו להיות חלק מקהילת הוואטסאפ הגדולה!</h1>
+    <h2>בינה מלאכותית בגובה העיניים – עם בר שאלתיאל</h2>
+    <!-- צורת גל -->
+    <div class="wave" id="wave">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path class="shape-fill" d="M0.00,49.98 C149.99,150.00 349.40,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- תוכן מרכזי -->
+  <div class="container" id="mainContent">
+    <img
+      src="http://images.ravpages.co.il/xsite_resources/user_content/49/83/56/11/498356112dc6a602f144c37d9479a763/images/5178a90d5fd752259192ed8cc511c0fc.jpg"
+      alt="בינה מלאכותית בגובה העיניים"
+      class="hero-image"
+    />
+
+    <p class="intro-text">
+      הצטרפו אלינו ללייבים מקצועיים מדי שבוע, פתרון שאלות ותוכן פרקטי על כלי בינה מלאכותית.  
+      יחד, נעקוב אחר כל העדכונים החדשים וננגיש אותם בקלות ובגובה העיניים!
+    </p>
+
+    <h3>מה אתם מקבלים בקהילה?</h3>
+    <ul class="benefits">
+      <li>לייב מקצועי מדי שבוע + מענה לכל השאלות שלכם!</li>
+      <li>תוכן פרקטי על כלי בינה מלאכותית – בגובה העיניים!</li>
+      <li>כל העדכונים בתחום – בצורה מונגשת וקלה ליישום.</li>
+    </ul>
+
+    <a href="thank-you.html" class="cta-button">כניסה לקבוצה</a>
+  </div>
+
+  <div class="footer">
+    © כל הזכויות שמורות - הקהילה של בר שאלתיאל
+  </div>
+
+  <!-- JavaScript לאנימציות: כניסה מדורגת, פרלקס לגל וכו' -->
+  <script>
+    // 1. אנימציית כניסה לקופסה המרכזית לאחר הטעינה
+    window.addEventListener("load", function() {
+      const container = document.getElementById('mainContent');
+      container.classList.add('reveal');
+    });
+
+    // 2. אפקט "כניסה בהדרגה" לרשימת היתרונות כשמופיעים במסך
+    const options = {
+      threshold: 0.2  // יופעל כש-20% מהאלמנט גלוי
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    }, options);
+
+    // מפעילים את ה-observer על כל LI
+    const listItems = document.querySelectorAll(".benefits li");
+    listItems.forEach(item => observer.observe(item));
+
+    // 3. פרלקס קטן על ה-Wave לפי גלילה
+    const wave = document.getElementById("wave");
+    window.addEventListener("scroll", function() {
+      // כמות הגלילה
+      let scrollTop = window.scrollY;
+      // הזזה מינימלית כדי לתת אפקט קל
+      // אפשר לשחק עם 0.5 או ערכים אחרים כדי לשנות את עוצמת הפרלקס
+      wave.style.transform = `translateY(${scrollTop * 0.2}px)`;
+    });
+  </script>
 </body>
 </html>

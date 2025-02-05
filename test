@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף נחיתה</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            color: white;
+            background: #f59e0b;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background: #d97706;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ברוך הבא!</h1>
+        <p>הצטרף אלינו לחוויה בלתי נשכחת והתחל את המסע שלך כבר היום.</p>
+        <a href="javascript: (function(){try{var d,i,s,ho,b;d=document;i=d.createElement('iframe');s=i.style;b=d.body;ho=b.style.overflow;b.style.overflow='hidden';s.position='fixed';s.top=s.left=0;s.zIndex='99999999';s.height=s.width='100%';s.border='none';i.src='https://secure.cardcom.solutions/ExternalAisurit4/asrahit.aspx?UID=0OXxw7weEScC8QUtHnAg&st=pm';function l(e){ try{var c=e.data;var x=c.split('-');var u=c.slice(c.indexOf('-')+1);switch(x[0]){case 'Success':d.body.removeChild(i);removeEventListener('message',l);b.style.overflow=ho;break;case 'Redirect':window.location.href=u;removeEventListener('message',l);b.style.overflow=ho;break;}}catch(ex){var track = new Image();track.src='https://secure.cardcom.solutions/api/EA4/PixelErrorData?'+'message='+encodeURIComponent('switch case Error Show EA4 popup Function , ex:'+ex)+'&UID='+p+'&uri=0&lineNumber=0&columnNumber=0';document.body.appendChild(track);}}addEventListener('message',l,false);b.appendChild(i);}catch(ex){var track=new Image();track.src='https://secure.cardcom.solutions/api/EA4/PixelErrorData?'+'message='+encodeURIComponent('Global Error Show EA4 popup Function , ex:'+ex)+'&UID='+p+'&uri=0&lineNumber=0&columnNumber=0';document.body.appendChild(track);}})()"><img border='0' style='border-style:none' alt='לתשלום'src='https://secure.cardcom.solutions/images/buttons/payment_he_normal.png'/></a>    </div>
+</body>
+</html>
